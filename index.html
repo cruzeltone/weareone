@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="style.css">
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Are One - Mental Health</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #111;
+            padding: 20px 0;
+            text-align: center;
+            color: #FF6600;
+        }
+
+        header .logo h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #FF6600;
+            font-size: 1.2rem;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+        }
+
+        main {
+            padding: 40px 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #FF6600;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .services-list {
+            display: flex;
+            gap: 20px;
+        }
+
+        .service-item {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            width: 30%;
+        }
+
+        .service-item h3 {
+            color: #FF6600;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #FF6600;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+        }
+
+        form input:focus, form textarea:focus {
+            border-color: #FF6600;
+            outline: none;
+        }
+
+        form button {
+            padding: 12px 20px;
+            background-color: #FF6600;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        form button:hover {
+            background-color: #e65c00;
+        }
+
+        footer {
+            background-color: #111;
+            padding: 20px 0;
+            text-align: center;
+            color: #FF6600;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>We Are One</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#register">Join Us</a></li>
+                <li><a href="#write-freely">Write Freely</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <p>At "We Are One," we provide compassionate mental health support and care, dedicated to empowering individuals through their mental wellness journeys. Our goal is to foster a safe, understanding environment for everyone seeking help.</p>
+            <p><strong>Founder:</strong> Cruzz Eltone, the visionary behind "We Are One," believes in breaking the stigma around mental health and offering holistic and personalized care for mental well-being.His dream of starting such an organisation also started with untold scars he never shared to anyone.
+            Despite having the desire to start such an organization,he didn't launch it till later in June,2024 where he looked for people with untold stories in the growing 
+        platform 'TikTok' then later advanced to creating a WhatsApp group. </p>
+        </section>
+
+        <section id="services" class="section">
+            <h2>Our Services</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <h3>Therapy & Counseling</h3>
+                    <p>Individual and group therapy sessions aimed at providing support and strategies for managing mental health challenges.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Emergency Mental Health Support</h3>
+                    <p>Immediate assistance and crisis intervention services for individuals experiencing mental health emergencies.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Specialist Consultations</h3>
+                    <p>Consultations with mental health specialists, including psychiatrists, psychologists, and counselors, for specialized care.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="register" class="section">
+            <h2>Join Us</h2>
+            <p>Become a member of "We Are One" and join a community dedicated to mental wellness and support. By joining, you will receive updates, resources, and invitations to mental health programs.</p>
+            <form action="#">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" placeholder="Your Full Name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <section id="write-freely" class="section">
+            <h2>Write Freely</h2>
+            <p>This is a safe space for you to express your thoughts, feelings, and experiences. Share what's on your mind with our community of like-minded individuals.</p>
+            <form action="#">
+                <label for="freely-message">Your Thoughts</label>
+                <textarea id="freely-message" name="freely-message" placeholder="Write whatever you're feeling..." rows="6" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="feedback" class="section">
+            <h2>Feedback</h2>
+            <p>Your feedback helps us grow and serve you better. Let us know what you think about our services and how we can improve!</p>
+            <form action="mailto:cruzeltone@gmail.com" method="POST" enctype="text/plain">
+                <label for="feedback-name">Your Name</label>
+                <input type="text" id="feedback-name" name="feedback-name" placeholder="Your Name" required>
+
+                <label for="feedback-email">Your Email</label>
+                <input type="email" id="feedback-email" name="feedback-email" placeholder="Your Email" required>
+
+                <label for="feedback-message">Your Feedback</label>
+                <textarea id="feedback-message" name="feedback-message" placeholder="Your Feedback" rows="6" required></textarea>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+
+       
+    </main>
+
+    <footer>
+        <p>&copy; 2025 We Are One Mental Health Organization. All rights reserved.</p>
+    </footer>
+</body>
+</html>
