@@ -264,4 +264,83 @@ footer a:hover {
     background-size: contain;
     background-repeat: no-repeat;
 }
+/* Basic styling for the share-story-section */
+.share-story-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+textarea, input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004494;
+}
+
+.view-stories-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.view-stories-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Styling the shared stories section */
+#shared-stories {
+    margin-top: 30px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#stories-list {
+    margin-top: 20px;
+}
+
+.story {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.story h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.story p {
+    font-size: 16px;
+    color: #555;
+}
+
 </style>
