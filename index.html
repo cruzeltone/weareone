@@ -34,7 +34,7 @@
         }
         
         nav a {
-            color: white;
+            color: grey;
             text-decoration: none;
             padding: 14px 20px;
             text-align: center;
@@ -53,7 +53,7 @@
         
         .hero {
             text-align: center;
-            background-color: #f4f4f9;
+            background-color: #be9438;
             padding: 50px 20px;
             border-radius: 10px;
             margin-bottom: 30px;
@@ -310,25 +310,37 @@
         <section class="signup-section">
             <h2>Sign Up to Become a Member</h2>
             <p>Join the We Are One movement and be a part of our mission to break the stigma around mental health. Sign up below to get involved and stay informed.</p>
-            <form class="signup-form" action="mailto:weareone0624@gmail.com" method="POST" enctype="multipart/form-data">
+            <form class="signup-form" action="send_signup_email.php" method="POST">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <input type="tel" name="phone" placeholder="Your Phone Number" required>
                 <button type="submit">Sign Up</button>
             </form>
         </section>
+        
 
         <section class="share-story-section">
             <h2>Share Your Untold Story</h2>
             <p>Sometimes, sharing our struggles can help us heal. We invite you to share your story here, so you can be part of a community that understands and supports you.</p>
-            <form class="share-story-form" action="mailto:weareone0624@gmail.com" method="POST" enctype="multipart/form-data">
-                <textarea name="story" placeholder="Write your story here..." required></textarea>
+            
+            <!-- Share Story Form -->
+            <form class="share-story-form" id="story-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <textarea id="story" placeholder="Write your story here..." required></textarea>
                 <button type="submit">Share Your Story</button>
             </form>
+        
             <div>
-            <a href="#shared-stories" class="view-stories-btn">View Shared Stories</a>
+                <a href="#shared-stories" class="view-stories-btn">View Shared Stories</a>
             </div>
         </section>
+        
+        <!-- Shared Stories Section -->
+        <section id="shared-stories">
+            <h2>Shared Stories</h2>
+            <div id="stories-list"></div>
+        </section>
+        
 
         <section id="shared-stories">
             <h2>Shared Untold Stories</h2>
@@ -361,5 +373,6 @@
         <p>&copy; 2025 We Are One. All rights reserved.</p>
         <p>For more information, <a href="mailto:info@weareone.org">contact us</a>.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
