@@ -1,112 +1,267 @@
 <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #222;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: rgb(102, 100, 100);
+    color: black;
+}
 
-        header {
-            background-color: #111;
-            padding: 20px 0;
-            text-align: center;
-            color: #FF6600;
-        }
+header {
+    background-color: #ff6600; /* Orange */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
 
-        header .logo h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
+header h1 {
+    margin: 0;
+}
 
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
 
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    text-align: center;
+    display: block;
+}
 
-        nav ul li a {
-            text-decoration: none;
-            color: #FF6600;
-            font-size: 1.2rem;
-        }
+nav a:hover {
+    background-color: #ff6600; /* Orange */
+}
 
-        nav ul li a:hover {
-            color: #fff;
-        }
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
 
-        main {
-            padding: 40px 20px;
-        }
+.hero {
+    text-align: center;
+    background-color: #f4f4f9;
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
 
-        .section {
-            margin-bottom: 40px;
-        }
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
 
-        .section h2 {
-            color: #FF6600;
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
 
-        .services-list {
-            display: flex;
-            gap: 20px;
-        }
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
 
-        .service-item {
-            background-color: #333;
-            padding: 20px;
-            border-radius: 8px;
-            width: 30%;
-        }
+.about div {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 
-        .service-item h3 {
-            color: #FF6600;
-        }
+.about h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
 
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
+.about p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
 
-        form input, form textarea {
-            padding: 10px;
-            font-size: 1rem;
-            border: 1px solid #FF6600;
-            border-radius: 5px;
-            background-color: #333;
-            color: white;
-        }
+.signup-section {
+    background-color: #f4f4f9;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
 
-        form input:focus, form textarea:focus {
-            border-color: #FF6600;
-            outline: none;
-        }
+.signup-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
 
-        form button {
-            padding: 12px 20px;
-            background-color: #FF6600;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.1rem;
-        }
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        form button:hover {
-            background-color: #e65c00;
-        }
+.signup-form input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
-        footer {
-            background-color: #111;
-            padding: 20px 0;
-            text-align: center;
-            color: #FF6600;
-        }
-    </style>
+.signup-form button {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    background-color: #ff6600; /* Orange */
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.signup-form button:hover {
+    background-color: #e65c00; /* Darker orange */
+}
+
+.share-story-section {
+    background-color: #f4f4f9;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.share-story-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.share-story-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.share-story-form textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 150px;
+}
+
+.share-story-form button {
+    width: 100%;
+    max-width: 600px;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    background-color: #ff6600; /* Orange */
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.share-story-form button:hover {
+    background-color: #e65c00; /* Darker orange */
+}
+
+.view-stories-btn {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    background-color: #ff6600; /* Orange */
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.view-stories-btn:hover {
+    background-color: #e65c00; /* Darker orange */
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #ff6600; /* Orange */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav a {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .about h3 {
+        font-size: 1.5rem;
+    }
+}
+.img-logo {
+    width: 300px;
+    height: 200px;
+    background-image: url(img/image1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+</style>

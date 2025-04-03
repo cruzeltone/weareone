@@ -1,217 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <link rel="stylesheet" href="style.css">
- <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>We Are One - Mental Health</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>We Are One - Mental Health Organization</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #222;
-            color: #fff;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            background-image: rgb(102, 100, 100);
+            color: black;
         }
-
+        
         header {
-            background-color: #111;
-            padding: 20px 0;
+            background-color: #ff6600; /* Orange */
+            color: white;
+            padding: 20px;
             text-align: center;
-            color: #FF6600;
         }
-
-        header .logo h1 {
+        
+        header h1 {
             margin: 0;
-            font-size: 2.5rem;
         }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: black;
         }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
+        
+        nav a {
+            color: white;
             text-decoration: none;
-            color: #FF6600;
+            padding: 14px 20px;
+            text-align: center;
+            display: block;
+        }
+        
+        nav a:hover {
+            background-color: #ff6600; /* Orange */
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        
+        .hero {
+            text-align: center;
+            background-color: #f4f4f9;
+            padding: 50px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
             font-size: 1.2rem;
+            line-height: 1.6;
         }
-
-        nav ul li a:hover {
-            color: #fff;
-        }
-
-        main {
-            padding: 40px 20px;
-        }
-
-        .section {
+        
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             margin-bottom: 40px;
         }
-
-        .section h2 {
-            color: #FF6600;
+        
+        .about div {
+            flex: 1;
+            margin: 10px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .about p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        .signup-section {
+            background-color: #f4f4f9;
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .signup-section h2 {
             font-size: 2rem;
             margin-bottom: 20px;
         }
-
-        .services-list {
-            display: flex;
-            gap: 20px;
-        }
-
-        .service-item {
-            background-color: #333;
-            padding: 20px;
-            border-radius: 8px;
-            width: 30%;
-        }
-
-        .service-item h3 {
-            color: #FF6600;
-        }
-
-        form {
+        
+        .signup-form {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            align-items: center;
         }
-
-        form input, form textarea {
+        
+        .signup-form input {
+            width: 100%;
+            max-width: 400px;
             padding: 10px;
-            font-size: 1rem;
-            border: 1px solid #FF6600;
+            margin: 10px 0;
+            border: 1px solid #ccc;
             border-radius: 5px;
-            background-color: #333;
-            color: white;
         }
-
-        form input:focus, form textarea:focus {
-            border-color: #FF6600;
-            outline: none;
-        }
-
-        form button {
-            padding: 12px 20px;
-            background-color: #FF6600;
-            color: white;
+        
+        .signup-form button {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px;
+            margin: 10px 0;
             border: none;
-            border-radius: 5px;
+            background-color: #ff6600; /* Orange */
+            color: white;
+            font-size: 1.2rem;
             cursor: pointer;
-            font-size: 1.1rem;
+            border-radius: 5px;
         }
-
-        form button:hover {
-            background-color: #e65c00;
+        
+        .signup-form button:hover {
+            background-color: #e65c00; /* Darker orange */
         }
-
-        footer {
-            background-color: #111;
-            padding: 20px 0;
+        
+        .share-story-section {
+            background-color: #f4f4f9;
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .share-story-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .share-story-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .share-story-form textarea {
+            width: 100%;
+            max-width: 600px;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            height: 150px;
+        }
+        
+        .share-story-form button {
+            width: 100%;
+            max-width: 600px;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            background-color: #ff6600; /* Orange */
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        .share-story-form button:hover {
+            background-color: #e65c00; /* Darker orange */
+        }
+        
+        .view-stories-btn {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            background-color: #ff6600; /* Orange */
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 5px;
             text-align: center;
-            color: #FF6600;
         }
-    </style>
+        
+        .view-stories-btn:hover {
+            background-color: #e65c00; /* Darker orange */
+        }
+        
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        footer a {
+            color: #ff6600; /* Orange */
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f4f4f9;
+            border-radius: 10px;
+        }
+        
+        .contact-info h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .about {
+                flex-direction: column;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+        
+            nav a {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+        
+            .hero h2 {
+                font-size: 2rem;
+            }
+        
+            .hero p {
+                font-size: 1rem;
+            }
+        
+            .about h3 {
+                font-size: 1.5rem;
+            }
+        }
+        .img-logo {
+            width: 300px;
+            height: 200px;
+            background-image: url(img/image1.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        </style>
+  
 </head>
-<body>
+<body background="img/image1.jpg">
     <header>
-        <div class="logo">
-            <h1>We Are One</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Our Services</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-                <li><a href="#register">Join Us</a></li>
-                <li><a href="#write-freely">Write Freely</a></li>
-                <li><a href="#feedback">Feedback</a></li>
-            </ul>
-        </nav>
+        <h1>We Are One</h1>
+        <p>Breaking the Stigma, Building Mental Health Awareness</p>
+    
     </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Get Involved</a>
+        <a href="#">Resources</a>
+        <a href="#">Contact Us</a>
+    </nav>
 
-    <main>
-        <section id="about" class="section">
-            <h2>About Us</h2>
-            <p>At "We Are One," we provide compassionate mental health support and care, dedicated to empowering individuals through their mental wellness journeys. Our goal is to foster a safe, understanding environment for everyone seeking help.</p>
-            <p><strong>Founder:</strong> Cruzz Eltone, the visionary behind "We Are One," believes in breaking the stigma around mental health and offering holistic and personalized care for mental well-being.His dream of starting such an organisation also started with untold scars he never shared to anyone.
-            Despite having the desire to start such an organization,he didn't launch it till later in June,2024 where he looked for people with untold stories in the growing 
-        platform 'TikTok' then later advanced to creating a WhatsApp group. </p>
+    <div class="container">
+        <section class="hero">
+           
+            <h2>Welcome to We Are One</h2>
+            <p>Our mission is to raise awareness and break the stigma surrounding mental health. Join us as we empower individuals and create a compassionate community where mental well-being is prioritized.</p>
         </section>
 
-        <section id="services" class="section">
-            <h2>Our Services</h2>
-            <div class="services-list">
-                <div class="service-item">
-                    <h3>Therapy & Counseling</h3>
-                    <p>Individual and group therapy sessions aimed at providing support and strategies for managing mental health challenges.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Emergency Mental Health Support</h3>
-                    <p>Immediate assistance and crisis intervention services for individuals experiencing mental health emergencies.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Specialist Consultations</h3>
-                    <p>Consultations with mental health specialists, including psychiatrists, psychologists, and counselors, for specialized care.</p>
-                </div>
+        <section class="about">
+            <div>
+                <h3>About the Founder</h3>
+                <p><strong>Cruzz Eltone</strong> is a passionate advocate for mental health awareness. As the founder of We Are One, Cruzz started the organization with a simple but powerful vision: to end the stigma surrounding mental health and provide resources for those who are struggling. His mission is to foster a society where mental health is treated with the same importance as physical health.</p>
+            </div>
+            <div>
+                <h3>Our Mission</h3>
+                <p>We Are One is committed to educating the public, supporting mental health initiatives, and creating safe spaces for individuals to seek help without judgment. Our focus is on raising awareness, sharing resources, and advocating for mental health policies that ensure everyone can access the care they need.</p>
             </div>
         </section>
 
-        <section id="register" class="section">
-            <h2>Join Us</h2>
-            <p>Become a member of "We Are One" and join a community dedicated to mental wellness and support. By joining, you will receive updates, resources, and invitations to mental health programs.</p>
-            <form action="#">
-                <label for="full-name">Full Name</label>
-                <input type="text" id="full-name" name="full-name" placeholder="Your Full Name" required>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
-
-                <button type="submit">Register</button>
+        <section class="signup-section">
+            <h2>Sign Up to Become a Member</h2>
+            <p>Join the We Are One movement and be a part of our mission to break the stigma around mental health. Sign up below to get involved and stay informed.</p>
+            <form class="signup-form" action="mailto:weareone0624@gmail.com" method="POST" enctype="multipart/form-data">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone Number" required>
+                <button type="submit">Sign Up</button>
             </form>
         </section>
 
-        <section id="write-freely" class="section">
-            <h2>Write Freely</h2>
-            <p>This is a safe space for you to express your thoughts, feelings, and experiences. Share what's on your mind with our community of like-minded individuals.</p>
-            <form action="#">
-                <label for="freely-message">Your Thoughts</label>
-                <textarea id="freely-message" name="freely-message" placeholder="Write whatever you're feeling..." rows="6" required></textarea>
-
-                <button type="submit">Submit</button>
+        <section class="share-story-section">
+            <h2>Share Your Untold Story</h2>
+            <p>Sometimes, sharing our struggles can help us heal. We invite you to share your story here, so you can be part of a community that understands and supports you.</p>
+            <form class="share-story-form" action="mailto:weareone0624@gmail.com" method="POST" enctype="multipart/form-data">
+                <textarea name="story" placeholder="Write your story here..." required></textarea>
+                <button type="submit">Share Your Story</button>
             </form>
+            <div>
+            <a href="#shared-stories" class="view-stories-btn">View Shared Stories</a>
+            </div>
         </section>
 
-        <section id="feedback" class="section">
-            <h2>Feedback</h2>
-            <p>Your feedback helps us grow and serve you better. Let us know what you think about our services and how we can improve!</p>
-            <form action="mailto:cruzeltone@gmail.com" method="POST" enctype="text/plain">
-                <label for="feedback-name">Your Name</label>
-                <input type="text" id="feedback-name" name="feedback-name" placeholder="Your Name" required>
-
-                <label for="feedback-email">Your Email</label>
-                <input type="email" id="feedback-email" name="feedback-email" placeholder="Your Email" required>
-
-                <label for="feedback-message">Your Feedback</label>
-                <textarea id="feedback-message" name="feedback-message" placeholder="Your Feedback" rows="6" required></textarea>
-
-                <button type="submit">Submit Feedback</button>
-            </form>
+        <section id="shared-stories">
+            <h2>Shared Untold Stories</h2>
+            <p>Here, you can view the stories shared by others in our community. These stories are a powerful reminder that we are not alone in our struggles.</p>
+            <!-- Ideally, here you would have a server-side system to display submitted stories dynamically -->
+            <p><em>Note: The stories will be displayed here once submitted. For privacy, they will be shared only with permission.</em></p>
         </section>
 
        
-    </main>
+
+        <section class="about">
+            <div>
+                <h3>Get Involved</h3>
+                <p>Join the We Are One movement! Whether through donations, volunteering, or spreading the word, you can help make a difference in the fight against mental health stigma.</p>
+            </div>
+            <div>
+                <h3>Our Impact</h3>
+                <p>Over the years, We Are One has touched the lives of thousands through community outreach programs, workshops, and collaborations with mental health professionals. Together, we are building a future where everyone can thrive mentally and emotionally.</p>
+            </div>
+        </section>
+        <section class="contact-info">
+            <img class="img-logo" src="img/image1.jpg" alt="weareone">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:weareone0624@gmail.com">weareone0624@gmail.com</a></p>
+            <p>Phone: <a href="tel:+254711853928">+254 7118 53928</a></p>
+        </section>
+    </div>
 
     <footer>
-        <p>&copy; 2025 We Are One Mental Health Organization. All rights reserved.</p>
+        <p>&copy; 2025 We Are One. All rights reserved.</p>
+        <p>For more information, <a href="mailto:info@weareone.org">contact us</a>.</p>
     </footer>
 </body>
 </html>
